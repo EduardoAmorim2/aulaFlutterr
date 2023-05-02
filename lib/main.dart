@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Teste teste'),
+      home: const MyHomePage(title: 'Aulas com Rhonildo'),
     );
   }
 }
@@ -33,6 +33,17 @@ class _MyHomePageState extends State<MyHomePage> {
   bool _sizeMultiplied = false;
   double radius = 200;
   bool isClicked = false;
+
+  var containerColors = [
+    Colors.pinkAccent,
+    Colors.greenAccent,
+    Colors.grey,
+    Colors.purpleAccent,
+    Colors.redAccent,
+    Colors.deepPurple,
+    Colors.black,
+    Colors.orange
+  ];
 
   void _incrementCounter() {
     setState(() {
@@ -64,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             setState(() {});
                           },
                           child: smallContainer(
-                            color: isClicked ? Colors.brown : Colors.red,
+                            color: isClicked ? containerColors[0] : Colors.red,
                             size: _sizeMultiplied ? 400 : 200,
                             child: Column(
                               children: [
@@ -77,8 +88,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                       },
                                       child: smallContainer(
                                         size: _sizeMultiplied ? 100 : 50,
-                                        color: isClicked ? Colors.brown : Colors
-                                            .green,
+                                        color: isClicked
+                                            ? containerColors[1]
+                                            : Colors.green,
                                         child: Text('1'),
                                       ),
                                     ),
@@ -89,8 +101,9 @@ class _MyHomePageState extends State<MyHomePage> {
                                       },
                                       child: smallContainer(
                                         size: _sizeMultiplied ? 100 : 50,
-                                        color: isClicked ? Colors.brown : Colors
-                                            .blue,
+                                        color: isClicked
+                                            ? containerColors[2]
+                                            : Colors.blue,
                                         child: Text('2'),
                                       ),
                                     ),
@@ -101,14 +114,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                     GestureDetector(
                                       onTap: () {
                                         isClicked ? false : true;
-                                        setState(() {
-
-                                        });
+                                        setState(() {});
                                       },
                                       child: smallContainer(
                                         size: _sizeMultiplied ? 100 : 50,
-                                        color: isClicked ? Colors.brown : Colors
-                                            .black,
+                                        color: isClicked
+                                            ? containerColors[3]
+                                            : Colors.black,
                                         child: Text(
                                           '3',
                                           style: TextStyle(color: Colors.white),
@@ -118,14 +130,13 @@ class _MyHomePageState extends State<MyHomePage> {
                                     GestureDetector(
                                       onTap: () {
                                         isClicked ? false : true;
-                                        setState(() {
-
-                                        });
+                                        setState(() {});
                                       },
                                       child: smallContainer(
                                         size: _sizeMultiplied ? 100 : 50,
-                                        color: isClicked ? Colors.brown : Colors
-                                            .white,
+                                        color: isClicked
+                                            ? containerColors[4]
+                                            : Colors.white,
                                         child: Text('4'),
                                       ),
                                     ),
@@ -150,7 +161,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           },
                           child: smallContainer(
                             size: _sizeMultiplied ? 400 : 200,
-                            color: isClicked ? Colors.brown : Colors.green,
+                            color:
+                                isClicked ? containerColors[5] : Colors.green,
                             child: Text('6'),
                           ),
                         ),
@@ -165,7 +177,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           },
                           child: smallContainer(
                             size: _sizeMultiplied ? 400 : 200,
-                            color: isClicked ? Colors.brown : Colors.blue,
+                            color: isClicked ? containerColors[6] : Colors.blue,
                             child: Text('7'),
                           ),
                         ),
@@ -176,7 +188,8 @@ class _MyHomePageState extends State<MyHomePage> {
                           },
                           child: smallContainer(
                             size: _sizeMultiplied ? 400 : 200,
-                            color: isClicked ? Colors.brown : Colors.yellow,
+                            color:
+                                isClicked ? containerColors[7] : Colors.yellow,
                             child: Text('8'),
                           ),
                         ),
